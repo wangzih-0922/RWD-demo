@@ -9,7 +9,7 @@
 .box {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
