@@ -1,0 +1,366 @@
+body{
+    font-family:'roboto','Noto Serif TC', sans-serif;
+    line-height: $light-hight-base;
+    font-size: $font-base;
+}
+
+.h2,.h3{
+    font-size: $font-xl;
+    font-weight: bold;
+}
+
+
+
+
+.d-flex-sb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.pt-60{
+    padding-top: 60px;
+}
+
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.pb-80{
+    padding-bottom: 80px;
+}
+
+.pb-8{
+    padding-bottom: 8px;
+}
+
+.mb-8{
+    margin-bottom: 8px;
+}
+
+.pb-16{
+    padding-bottom: 16px;
+}
+
+.mb-16{
+    margin-bottom: 16px;
+}
+
+.pr-30{
+    padding-right: 30px;
+}
+
+.mb-32{
+    margin-bottom: 32px;
+}
+
+.mr-30{
+    margin-right: 30px;
+}
+
+.ml-30{
+    margin-left: 30px;
+}
+
+.mr-8{
+    margin-right: 8px;
+}
+
+.ml-8{
+    margin-left: 8px;
+}
+
+
+
+
+
+/** layout css**/
+
+.header-container{
+    max-width: 1774px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include pad{
+        max-width: 720px;
+    }
+    @include mobile{
+        max-width: 375px;
+        padding: 0;
+    }
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include pad{
+        max-width: 720px;
+    }
+    @include mobile{
+        max-width: 360px;
+        padding: 0 7.5px;
+    }
+}
+
+.header{
+    background-color: $bg-primary;
+}
+
+.h1 a{
+    display: block;
+    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/logo.png?raw=true);
+    width: 80px;
+    height: 48.57px;
+    margin: 30px 0;
+    @include text-hide;
+    @include mobile{
+        width: 48px;
+        height: 29.14px;
+        background-size: cover;
+        margin: 10px 0;
+    }
+}
+
+
+
+.topmenu li{
+    padding-left: 64px;
+    @include pad{
+        padding-left: 40px;
+    }
+    a{
+      display: block;
+      padding: 10px 0;
+      color: white;
+      font-size: $font-s;
+      text-decoration: none;
+      &:hover{
+        color: black;
+        @include pad{
+                color: white;
+            }
+        }
+      }
+    }
+
+
+
+
+
+@media(max-width:375px){
+    .header .d-flex-sb{
+        flex-direction: column;
+
+    }
+    .topmenu{
+        width: 100%;
+    }
+    .topmenu li{
+        width: 50%;
+        border: 1px solid white;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+
+
+@media(max-width:375px){
+    .topmenu li a{
+        padding: 8px 0;
+        line-height: 1.45;
+     }
+}
+
+
+
+@media(max-width:768px){
+
+    .topmenu li a:active{
+        color: $text-secondary;
+        background: white;
+    }
+}
+
+
+
+
+/** footer css**/
+.footer{
+    background-color: $bg-primary;
+}
+.footer .d-flex{
+    flex-wrap: nowrap;
+}
+.footer-menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    margin: 34px 0 26px 0; 
+}
+
+.footer-menu li{
+    margin-right: 48px;
+}
+
+@media(max-width:768px){
+    .footer-menu a{
+        padding: 10px 9px;
+        margin: 28px 0 8px 0; 
+
+    }
+    .footer-menu li{
+        margin-right: 22px;
+    }
+}
+
+@media(max-width:375px){
+    .footer-menu{
+        display: none;
+    }
+}
+
+.footer .container{
+    position: relative;
+}
+
+.medialink{
+    position: absolute;
+    top: 32px;
+    right: 15px;
+}
+
+.medialink li{
+    margin-left: 32px;
+}
+
+.medialink a{
+    display: block;
+}
+@media(max-width: 768px){
+    .medialink li{
+       margin-left: 24px;
+    }
+    .medialink img{
+        width: 24px;
+        height: 24px;
+    }  
+}
+@media(max-width: 375px){
+    .medialink{
+        top: 24px;
+    }
+}
+
+
+
+.footer-contact a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 36px;
+}
+@media(max-width:768px){
+    .footer-contact a{
+        font-size: $font-s;
+        margin-left: 8px;
+    }
+    .footer-contact .pb-16{
+        padding-bottom: 12px;
+    }
+    .footer-contact img{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media(max-width:375px){
+    .footer-contact a{
+        font-size: $font-base;
+        line-height: 1.87;
+        margin-left: 4px;
+    }
+    .footer-contact .pb-16{
+        padding-bottom: 6px;
+    }
+    .footer-contact img{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.footer-contact{
+    padding-bottom: 24px;
+    border-bottom: 1px white solid;
+    margin-bottom: 23px;
+}
+
+@media(max-width:768px){
+    .footer-contact{
+        margin-bottom: 14px;
+    }
+}
+@media(max-width:375px){
+    .footer-contact{
+        margin-bottom: 16px;
+        padding-top: 25px;
+    }
+}
+
+.copyright{
+    padding-bottom: 30px;
+}
+
+.copyright p{
+    color: white;
+}
+
+.copyright-policy a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: $font-xs;
+    margin-left: 48px;
+    padding: 10px 0;
+}
+@media(max-width:768px){
+    .copyright-policy a{
+        margin-left: 24px;
+    }
+}
+
+@media(max-width:375px){
+    .copyright{
+        padding-bottom: 14px;
+    }
+    .copyright p{
+        font-size: $font-xs;
+    }
+    .copyright .d-flex-sb, .copyright .d-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .copyright-policy a{
+        margin-left: 0;
+        padding: 8px 0 0 0;
+        }
+}
+
+.footer-menu a:hover, .copyright-policy a:hover, .footer-contact a:hover{
+    text-decoration: underline;
+}
+@media(max-width:768px){
+    .footer-menu a:active, .copyright-policy a:active, .footer-contact a:active{
+        color: black;
+    }
+
+}

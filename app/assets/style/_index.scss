@@ -1,0 +1,509 @@
+/** banner css**/
+.banner{
+    max-width: 100%;
+    height: 840px;
+    background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true) center;
+    
+}
+
+.banner .container{
+    position: relative;
+}
+
+.banner .h2{
+    position: absolute;
+    top: 348px;
+    right: 15px;
+    text-align: right;
+    font-size: $font-xxl;
+    color: $text-primary;
+
+
+}
+
+.banner .h2 span{
+    font-size: 36px;
+    font-weight: normal;
+}
+
+@media(max-width:768px){
+    .banner .h2{
+        top: 372px;
+        font-size: $font-xl;
+    }
+    .banner .h2 span{
+        font-size: $font-xs;
+    }
+
+}
+
+@media(max-width:375px){
+    .banner{
+        height: 394px;
+        background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-sm.png?raw=true);
+        background-size: cover;
+    }
+    .banner .h2{
+        top: 164px;
+        right: 7.5px;
+        font-size: $font-l;
+    }
+    .banner .h2 span{
+        font-size: $font-base;
+    }
+}
+
+/**about css**/
+.about{
+    background-color: $bg-secondary;
+}
+.about .h2{
+    text-align: center;
+    color: $text-primary;
+}
+.about .d-flex{
+    justify-content: space-between;
+}
+
+.about-list li{
+    width: 25%;
+    .about-text{
+        color: $text-primary;
+    }
+}
+
+.icon-wrap-about{
+    text-align: center;
+    height: 100px;
+}
+
+.about-text{
+    font-size: $font-m;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media(max-width:768px){
+    .about.pt-60{
+        padding-top: 40px;
+    }
+    .about.pb-80{
+        padding-bottom: 56px;
+    }
+    .about .h2{
+        font-size: $font-l;
+    }
+    .about .mb-40{
+        margin-bottom: 0px;
+    }
+    .about-list li{
+        width: 50%;
+        padding: 32px 52.5px 0 52.5px;
+    }
+    
+}
+
+@media(max-width:375px){
+    .about.pt-60{
+        padding-top: 32px;
+    }
+    .about.pb-80{
+        padding-bottom: 40px;
+    }
+    .about .h2{
+        font-size: $font-m;
+        line-height: 2;
+    }
+    .about .mb-40{
+        margin-bottom: -12px;
+    }
+    .about-list li{
+        width: 100%;
+    }
+}
+
+/** classic-product css **/
+
+.classic-product .h2{
+    text-align: center;
+    color: $text-primary;
+}
+
+.classic-product li h3{
+    color: $text-secondary;
+}
+
+.classic-product .d-flex{
+    align-items: center;
+}
+
+.classic-product .d-flex:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.classic-product-img{
+    width: 58.33%;
+}
+
+.icon-wrap-classic{
+    width: 48px;
+    height: 48px;
+    text-align: center;
+}
+
+@media(max-width:768px){
+    .classic-product .h2{
+        font-size: $font-l;
+    }
+    .classic-product .h3{
+        font-size: 28px;
+        line-height: 2.5;
+    }
+    .classic-product .d-flex:nth-child(even){
+        flex-direction: row;
+    }
+    .icon-wrap-classic{
+        width: 40px;
+        height: 40px;
+    }
+    .classic-product-img.ml-30{
+        margin-left: 0;
+        margin-right: 30px;
+    }
+    .icon-wrap-classic.ml-8{
+        margin-left: 0;
+        margin-right: 8px;
+    }
+    .classic-product.pt-60{
+        padding-top: 40px;
+    } 
+    .classic-product.pb-80{
+        padding-bottom: 56px;
+    }
+    .classic-product .mb-40{
+        margin-bottom: 32px;
+    }
+    .classic-product-img.mb-32{
+        margin-bottom: 8px;
+    }
+
+}
+
+@media(max-width:375px){
+    .classic-product .h2{
+        font-size: $font-s;
+        line-height: 2.4;
+    }
+    .classic-product-img.ml-30{
+        margin-right: 0;
+    }
+    .classic-product-img.mr-30{
+        margin-right: 0;
+    }
+    .classic-product-img{
+        width: 100%;
+        position: relative;
+    }
+    .icon-wrap-classic, .classic-product .h3{
+        position: absolute;
+    }
+    .icon-wrap-classic{
+        left: 62px;
+    }
+    .classic-product .h3{
+        left: 110px;
+    }
+    .classic-product.pt-60{
+        padding-top: 32px;
+    } 
+    .classic-product.pb-80{
+        padding-bottom: 40px;
+    }
+    .classic-product .mb-40{
+        margin-bottom: 20px;
+    }
+}
+
+/** co-brading css **/
+.co-branding{
+    background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true) center;
+}
+
+.co-branding .h2{
+    color: white;
+    text-align: center;
+}
+
+.co-branding ul li{
+    width: 47%;
+}
+
+.co-branding ul li img{
+    opacity: 0.5;
+}
+
+.double-a, .youth{
+    position: relative;
+}
+
+.double-a h4 a, .youth h4 a{
+    display: block;
+    font-size: 72px;
+    text-decoration: none;
+    color: $text-secondary;
+
+}
+.double-a h4 a:hover, .youth h4 a:hover{ 
+    color: white;
+}
+
+.double-a h4, .youth h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+@media(max-width:768px){
+    .co-branding{
+        background-size: cover;
+    }
+    .co-branding .h2{
+        font-size: $font-l;
+    }
+    .double-a h4 a, .youth h4 a{
+        font-size: $font-l;
+    }
+    .co-branding.pt-60{
+        padding-top: 40px;
+    } 
+    .co-branding.pb-80{
+        padding-bottom: 56px;
+    }
+    .co-branding .mb-40{
+        margin-bottom: 32px;
+    }
+    .double-a h4 a:active, .youth h4 a:active{ 
+        color: white;
+    }
+
+}
+
+@media(max-width:375px){
+    .co-branding .h2{
+        font-size: $font-s;
+        line-height: 2.4;
+    }
+    .co-branding ul li{
+        width: 100%;
+    }
+    .double-a.mr-30{
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .co-branding.pt-60{
+        padding-top: 32px;
+    } 
+    .co-branding.pb-80{
+        padding-bottom: 40px;
+    }
+    .co-branding .mb-40{
+        margin-bottom: 20px;
+    }
+
+}
+
+/** recommendation css **/
+.recommendation .h2{
+    text-align: center;
+    color: $text-primary;
+}
+
+.recommendation .d-flex-sb{
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.rec-vlogger{
+    width: 23.5%;
+}
+
+.rec-vlogger img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.rec-text{
+    padding: 16px;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px #00000029;
+    height: 204px;
+    position: relative;
+}
+
+.vlogger-name, .date{
+    font-size: $font-xs;
+}
+
+.date{
+    color: #707070;
+    position: absolute;
+    bottom: 16px;
+}
+
+@media(max-width:768px){
+    .recommendation .h2{
+        font-size: $font-l;
+    }
+    .rec-vlogger{
+        width: 48%;
+        margin-top: 32px;
+    }
+    .rec-text{
+        padding: 16px 24px 16px 16px;
+    }
+    .recommendation.pt-60{
+        padding-top: 40px;
+    } 
+    .recommendation.pb-80{
+        padding-bottom: 56px;
+    }
+    .recommendation .mb-40{
+        margin-bottom: 0px;
+    }
+
+}
+
+@media(max-width:375px){
+    .recommendation .h2{
+        font-size: 20px;
+        line-height: 2.4;
+    }
+    .rec-vlogger{
+        width: 100%;
+        margin-top: 14px;
+    }
+    .rec-text{
+        padding: 16px 24px 16px 16px;
+    }
+    .recommendation.pt-60{
+        padding-top: 32px;
+    } 
+    .recommendation.pb-80{
+        padding-bottom: 40px;
+    }
+    .recommendation .mb-40{
+        margin-bottom: 4px;
+    }
+
+}
+
+/** contact css **/
+.container-wrap{
+    width: 66.6%;
+    margin: 0 auto;
+}
+
+.contact .h2{
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.contact-text{
+    font-size: $font-s;
+    margin-bottom: 20px;
+}
+
+.name input, .telphone input, .mail input{
+    width: 100%;
+    padding: 12px 0 14px 16px;
+}
+
+.textarea{
+    width: 100%;
+    height: 136px;
+    padding: 12px 0 0 16px;
+}
+
+.contact-form .btn input{
+    color: white;
+    padding: 16px 143px;
+    border: none;
+    cursor: pointer;
+    font-size: $font-base;
+    background-color: $text-secondary;
+}
+
+.contact-form .btn input:hover{
+    background-color: #650300 ;
+}
+
+.contact-form .btn{
+    text-align: center;
+}
+
+@media(max-width:768px){
+    .contact .h2{
+        font-size: $font-l;
+    }
+    .contact-text{
+        font-size: $font-base;
+        margin-bottom: 16px;
+    }
+    .name input, .telphone input, .mail input{
+        padding: 8px 12px
+    }
+    .contact-form .mb-16{
+        margin-bottom: 8px;
+    }
+    .contact-form{
+        font-size: $font-xs;
+    }
+    .textarea{
+        height: 100px;
+        padding: 8px 0 0 12px;
+    }
+    .agreement.mb-40{
+        margin-bottom: 20px;
+    }
+    .contact-form .btn input{
+        padding: 10px 77px;
+        font-size: $font-xs;
+    }
+    .contact.pt-60{
+        padding-top: 40px;
+    } 
+    .contact.pb-80{
+        padding-bottom: 56px;
+    }
+}
+
+@media(max-width: 375px){
+    .container-wrap{
+        width: 100%;
+    }
+    .contact .h2{
+        font-size: $font-s;
+        line-height: 2.4;
+        margin-bottom: 20px;
+    }
+    .contact-text{
+        margin-bottom: 8px;
+    }
+
+    
+    .contact-form .btn input{
+        padding: 8px 54.5px;
+    }
+    .contact.pt-60{
+        padding-top: 30px;
+    } 
+    .contact.pb-80{
+        padding-bottom: 40px;
+    }
+
+}
+
