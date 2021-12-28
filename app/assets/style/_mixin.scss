@@ -4,8 +4,21 @@
     overflow: hidden;
 }
 
+@mixin position-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 @mixin pad{
     @media(max-width: 768px){
+      @content;
+    }
+  }
+  
+@mixin padLg{
+    @media(max-width: 576px){
       @content;
     }
   }

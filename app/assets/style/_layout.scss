@@ -1,366 +1,197 @@
-body{
-    font-family:'roboto','Noto Serif TC', sans-serif;
-    line-height: $light-hight-base;
-    font-size: $font-base;
-}
-
-.h2,.h3{
-    font-size: $font-xl;
-    font-weight: bold;
-}
-
-
-
-
-.d-flex-sb{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.d-flex{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-
-.pt-60{
-    padding-top: 60px;
-}
-
-.mb-40{
-    margin-bottom: 40px;
-}
-
-.pb-80{
-    padding-bottom: 80px;
-}
-
-.pb-8{
-    padding-bottom: 8px;
-}
-
-.mb-8{
-    margin-bottom: 8px;
-}
-
-.pb-16{
-    padding-bottom: 16px;
-}
-
-.mb-16{
-    margin-bottom: 16px;
-}
-
-.pr-30{
-    padding-right: 30px;
-}
-
-.mb-32{
-    margin-bottom: 32px;
-}
-
-.mr-30{
-    margin-right: 30px;
-}
-
-.ml-30{
-    margin-left: 30px;
-}
-
-.mr-8{
-    margin-right: 8px;
-}
-
-.ml-8{
-    margin-left: 8px;
-}
-
-
-
-
-
-/** layout css**/
-
-.header-container{
+// 頁頭選單
+.nav-container{
     max-width: 1774px;
     margin: 0 auto;
-    padding: 0 15px;
-    @include pad{
-        max-width: 720px;
+    padding: 0px 15px;
+    img{
+        padding: 30px 0px;
     }
-    @include mobile{
+}
+
+.nav-menu{
+    margin-right: -32px;
+}
+
+.nav-menu li a{
+    font-size: $font-s;
+    color: $light;
+    padding: 0px 32px;
+    &:hover{
+        color: pink;
+    }
+}
+
+@media(max-width:768px){
+    .nav-container{
+        max-width: 720px;
+        img{
+            padding: 10px 0px;
+        }
+    }
+    .nav-container >.d-flex{
+        flex-direction: column;
+    }
+    .nav-menu{
+        margin-right: -20px;
+    }
+    .nav-menu li a{
+        padding: 5px 20px;
+    }
+}
+
+@media(max-width:375px){
+     .nav-container{
         max-width: 375px;
         padding: 0;
     }
-}
-
-.container{
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
-    @include pad{
-        max-width: 720px;
-    }
-    @include mobile{
-        max-width: 360px;
-        padding: 0 7.5px;
-    }
-}
-
-.header{
-    background-color: $bg-primary;
-}
-
-.h1 a{
-    display: block;
-    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/logo.png?raw=true);
-    width: 80px;
-    height: 48.57px;
-    margin: 30px 0;
-    @include text-hide;
-    @include mobile{
-        width: 48px;
-        height: 29.14px;
-        background-size: cover;
-        margin: 10px 0;
-    }
-}
-
-
-
-.topmenu li{
-    padding-left: 64px;
-    @include pad{
-        padding-left: 40px;
-    }
-    a{
-      display: block;
-      padding: 10px 0;
-      color: white;
-      font-size: $font-s;
-      text-decoration: none;
-      &:hover{
-        color: black;
-        @include pad{
-                color: white;
-            }
-        }
-      }
-    }
-
-
-
-
-
-@media(max-width:375px){
-    .header .d-flex-sb{
-        flex-direction: column;
-
-    }
-    .topmenu{
+    .nav-menu{
+        margin-right: 0px;
         width: 100%;
     }
-    .topmenu li{
+    .nav-menu li{
         width: 50%;
-        border: 1px solid white;
         text-align: center;
-        padding-left: 0;
+    }
+    .nav-menu li a{
+        padding: 8px 0px;
+        border: 1px solid $light;
+    }
+    .nav-menu li a:hover{
+        background-color: $light;
+        color: $primary;
+    }
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color:black
+    ;
+}
+
+/** 頁尾**/
+.footer-body{
+    padding: 32px 0px;
+   border-bottom: 1px solid $light;
+   @include pad{
+       padding: 32px 0px 20px 0px;
+   }
+   @include mobile{
+       padding: 24px 0px;
+   }
+}
+
+.footer-menu{
+    margin-left: -24px;
+    padding: 11px 0px 36px 0px;
+    li a{
+        color: $light;
+        padding: 0px 24px;
+    }
+}
+
+.footer-media{
+    margin-right: -16px;
+    li a{
+        color: $light;
+        font-size: 47px;
+        padding: 0px 16px;
+        line-height: 0;
     }
 }
 
 
 
-@media(max-width:375px){
-    .topmenu li a{
-        padding: 8px 0;
-        line-height: 1.45;
-     }
-}
-
-
-
-@media(max-width:768px){
-
-    .topmenu li a:active{
-        color: $text-secondary;
-        background: white;
-    }
-}
-
-
-
-
-/** footer css**/
-.footer{
-    background-color: $bg-primary;
-}
-.footer .d-flex{
-    flex-wrap: nowrap;
-}
-.footer-menu a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 0;
-    margin: 34px 0 26px 0; 
-}
-
-.footer-menu li{
-    margin-right: 48px;
-}
-
-@media(max-width:768px){
-    .footer-menu a{
-        padding: 10px 9px;
-        margin: 28px 0 8px 0; 
-
-    }
-    .footer-menu li{
-        margin-right: 22px;
-    }
-}
-
-@media(max-width:375px){
-    .footer-menu{
-        display: none;
-    }
-}
-
-.footer .container{
-    position: relative;
-}
-
-.medialink{
-    position: absolute;
-    top: 32px;
-    right: 15px;
-}
-
-.medialink li{
-    margin-left: 32px;
-}
-
-.medialink a{
-    display: block;
-}
-@media(max-width: 768px){
-    .medialink li{
-       margin-left: 24px;
-    }
-    .medialink img{
-        width: 24px;
-        height: 24px;
-    }  
-}
-@media(max-width: 375px){
-    .medialink{
-        top: 24px;
-    }
-}
-
-
-
-.footer-contact a{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin-left: 22px;
+.contact-list li a{
     font-size: 36px;
-}
-@media(max-width:768px){
-    .footer-contact a{
-        font-size: $font-s;
-        margin-left: 8px;
-    }
-    .footer-contact .pb-16{
-        padding-bottom: 12px;
-    }
-    .footer-contact img{
-        width: 24px;
-        height: 24px;
+    line-height: 1.3;
+    color: $light;
+    .contact-icon{
+        padding-right: 20px;
     }
 }
 
-@media(max-width:375px){
-    .footer-contact a{
-        font-size: $font-base;
-        line-height: 1.87;
-        margin-left: 4px;
+.footer-info{
+    padding: 36px 0px 39px 0px;
+    .privacy{
+        margin-right: -24px;
+        li a{
+        color: $light;
+        font-size: $font-xs;
+        line-height: 1.42;
+        padding: 0px 24px;
     }
-    .footer-contact .pb-16{
-        padding-bottom: 6px;
     }
-    .footer-contact img{
-        width: 20px;
-        height: 20px;
-    }
-}
-
-.footer-contact{
-    padding-bottom: 24px;
-    border-bottom: 1px white solid;
-    margin-bottom: 23px;
-}
-
-@media(max-width:768px){
-    .footer-contact{
-        margin-bottom: 14px;
-    }
-}
-@media(max-width:375px){
-    .footer-contact{
-        margin-bottom: 16px;
-        padding-top: 25px;
-    }
+    
 }
 
 .copyright{
-    padding-bottom: 30px;
+    color: $light;
 }
 
-.copyright p{
-    color: white;
-}
-
-.copyright-policy a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: $font-xs;
-    margin-left: 48px;
-    padding: 10px 0;
-}
-@media(max-width:768px){
-    .copyright-policy a{
-        margin-left: 24px;
-    }
-}
-
-@media(max-width:375px){
-    .copyright{
-        padding-bottom: 14px;
-    }
-    .copyright p{
-        font-size: $font-xs;
-    }
-    .copyright .d-flex-sb, .copyright .d-flex{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .copyright-policy a{
-        margin-left: 0;
-        padding: 8px 0 0 0;
-        }
-}
-
-.footer-menu a:hover, .copyright-policy a:hover, .footer-contact a:hover{
+.footer a:hover{
     text-decoration: underline;
 }
-@media(max-width:768px){
-    .footer-menu a:active, .copyright-policy a:active, .footer-contact a:active{
-        color: black;
-    }
 
+@media(max-width:768px){
+    .footer-menu{
+        margin-left: -20px;
+        padding: 6px 0px 18px 0px;
+        li a{
+            padding: 0px 20px;
+        }
+    }
+    
+    .footer-media{
+        margin-right: -12px;
+        li a{
+            font-size: 23px;
+            padding: 0px 12px;
+        }
+    }
+    .contact-list li a{
+        font-size: $font-s;
+        .contact-icon{
+            padding-right: 10px;
+        }
+    }
+    
+    .footer-info{
+        padding: 24px 0px 32px 0px;
+        .privacy{
+            margin-right: -12px;
+            li a{
+            padding: 0px 12px;
+        }
+        }
+        
+    }
+    
+}
+
+@media(max-width:576px){
+    .d-none{
+        display: none;
+    }
+    .contact-list li a{
+        font-size: $font-base;
+        .contact-icon{
+            padding-right: 6.5px;
+        }
+    }
+    .copyright{
+        font-size: $font-xs;
+        margin-bottom: 8px;
+    }
+    .footer-info{
+        padding: 16px 0px 16px 0px;
+        .privacy{
+            flex-direction: column;
+            margin-right: 0;
+            li a{
+            padding:0px 0px 8px 0px;
+        }
+        }
+        
+    }
 }

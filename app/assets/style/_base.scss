@@ -1,0 +1,141 @@
+*,*::before,*::after{
+    box-sizing:border-box;
+  }
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+body{
+    font-family:'roboto','Noto Serif TC', serif;
+    line-height: $light-hight-base;
+    font-size: $font-base;
+}
+
+.text-primary{
+    color: $primary-dark;
+}
+.text-secondary{
+    color: $primary;
+}
+.bg-primary{
+    background-color: $primary;
+}
+
+.bg-secondary{
+    background-color: $primary-light;
+}
+
+
+
+.d-flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.jc-end{
+    justify-content: end;
+}
+
+
+.jc-sb{
+    justify-content: space-between;
+} 
+
+.jc-center{
+    justify-content: center;
+}
+
+.ai-center{
+    align-items: center;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.mb-1{
+    margin-bottom: 8px;
+}
+
+.mb-2{
+    margin-bottom: 16px;
+}
+
+.pt-l-7p5{
+    padding-top: 60px;
+}
+
+.pb-l-10{
+    padding-bottom: 80px;
+}
+
+@media(max-width:768px){
+    .pt-m-5{
+    padding-top: 40px;
+    }
+    .pb-m-7{
+    padding-bottom: 56px;
+    }
+}
+
+@media(max-width:375px){
+    .pt-s-4{
+    padding-top: 32px;
+    }
+    .pb-s-5{
+    padding-bottom: 40px;
+    }
+}
+
+
+
+
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    @include pad{
+        max-width: 720px;
+    }
+    @include mobile{
+        max-width: 360px;
+        padding: 0px 7.5px;
+    }
+}
+
+.subtitle{
+    font-size: $font-xl;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    @include pad{
+        font-size: $font-l;
+        margin-bottom: 32px;
+    }
+    @include padLg{
+        font-size: $font-m;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
