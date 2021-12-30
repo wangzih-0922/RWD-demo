@@ -56,6 +56,10 @@ body{
     justify-content: center;
 }
 
+.ai-start{
+    align-items: flex-start;
+}
+
 .ai-center{
     align-items: center;
 }
@@ -76,16 +80,32 @@ body{
     padding-top: 60px;
 }
 
+.pt-l-12{
+    padding-top: 96px;
+}
+
 .pb-l-10{
     padding-bottom: 80px;
 }
+
+.pb-l-20{
+    padding-bottom: 160px;
+}
+
+
 
 @media(max-width:768px){
     .pt-m-5{
     padding-top: 40px;
     }
+    .pt-m-7p5{
+    padding-top: 60px;
+    }
     .pb-m-7{
     padding-bottom: 56px;
+    }
+    .pb-m-12{
+    padding-bottom: 96px;
     }
 }
 
@@ -93,8 +113,14 @@ body{
     .pt-s-4{
     padding-top: 32px;
     }
+    .pt-s-3p5{
+    padding-top: 28px;
+    }
     .pb-s-5{
     padding-bottom: 40px;
+    }
+    .pb-s-7{
+    padding-bottom: 56px;
     }
 }
 
@@ -131,6 +157,25 @@ body{
 
 }
 
+.pages-title{
+    font-size: $font-xl;
+    line-height: 1.45;
+    font-weight: bold;
+    padding-left: 16px;
+    border-left: 8px solid #9F1213;
+    margin-bottom: 60px;
+    @include pad{
+        line-height: 1.39;
+        border-left: 4px solid #9F1213;
+        margin-bottom: 40px;
+    }
+    @include padLg{
+        font-size: 28px;
+        line-height: 1.42;
+        padding-left: 8px;
+        margin-bottom: 24px;
+    }
+}
 
 
 

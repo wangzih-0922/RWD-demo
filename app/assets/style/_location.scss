@@ -1,0 +1,121 @@
+.location-select{
+    margin-bottom: 32px;
+    label{
+       font-size: $font-m;
+       padding-right: 20px;
+    }
+    select{
+        width: 305px;
+        font-size: 18px;
+        line-height: 1.4;
+        color: #495057;
+        padding: 8px 0px 8px 19px;
+    }
+}
+
+
+.location-list{
+    margin:0px -1.5% -32px -1.5%;
+}
+.location-card{
+    width: 30.333%;
+    border: 1px solid #00000020;
+    margin:0px 1.5% 32px 1.5%;
+    
+    .location-title{
+        font-size: $font-m;
+        padding: 12px 0px 12px 24px;
+        border-bottom: 1px solid #00000020;
+    }
+    .location-card-body{
+        font-size: $font-s;
+        padding: 16px 24px;
+        i{
+            font-size: 18px;
+            padding-right: 11px;
+        }
+    }
+    .location-info-btn{
+        width: 100%;
+        font-size: 19px;
+        line-height: 1.42;
+        text-align: center;
+        color: $light;
+        background-color: black;
+        padding: 20px 0px;
+        &:hover{
+            background-color: $primary;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .location-select{
+        margin-bottom: 24px;
+        label{
+           font-size: $font-base;
+        }
+        select{
+            width: 221px;
+            font-size: $font-base;
+            line-height: $light-hight-base;
+            padding: 10px 0px 10px 16px;
+        }
+    }
+    .location-list{
+        margin:0px -2% -20px -2%;
+    }
+    .location-card{
+        width: 46%;
+        margin:0px 2% 20px 2%;
+        
+        .location-title{
+            font-size: $font-base;
+            padding: 8px 0px 8px 24px;
+        }
+        .location-card-body{
+            font-size: $font-xs;
+            i{
+                font-size: 15px;
+                padding-right: 10.5px;
+            }
+        }
+        .location-info-btn{
+            width: 100%;
+            font-size: $font-xs;
+            padding: 16px 0px;
+        }
+    }
+}
+
+@media(max-width:576px){
+    .location-list{
+        margin:0px -2% -20px -2%;
+        justify-content: center;
+    }
+    .location-card{
+        width: 60%;
+    }
+}
+
+@media(max-width:375px){
+    .location-select{
+        margin-bottom: 20px;
+        label{
+           font-size: $font-xs;
+        }
+        select{
+            width: 75%;
+            font-size: $font-xs;
+            padding: 7px 0px 7px 16px;
+        }
+    }
+    .location-list{
+        margin:0px 0px -16px 0px;
+    }
+    .location-card{
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+    
